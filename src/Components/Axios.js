@@ -14,14 +14,20 @@ function Categories() {
   }, []);
 
   return (
-    <div className="card-container">
-      {categories.map(item => (
-        <div key={item.idCategory} className="card">
-          <h2>{item.strCategory}</h2>
-          <img src={item.strCategoryThumb} alt={item.strCategory} />
-          <p>{item.strCategoryDescription.slice(0, 50)}</p>
-        </div>
-      ))}
+    <div>
+
+      <h1>BEST FOOD
+        <br />
+        collection</h1>
+      <div className="card-container">
+        {categories.map(item => (
+          <div key={item.idCategory} className="card">
+            <h2>{item.strCategory}</h2>
+            <img src={item.strCategoryThumb} alt={item.strCategory} />
+            <p>{item.strCategoryDescription.slice(0, 50)}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
